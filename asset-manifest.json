@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/todo-mern/static/css/main.fbacc9a0.css",
-    "main.js": "/todo-mern/static/js/main.3b6c04aa.js",
+    "main.css": "/todo-mern/static/css/main.11dcdf9d.css",
+    "main.js": "/todo-mern/static/js/main.292b5241.js",
     "index.html": "/todo-mern/index.html"
   },
   "entrypoints": [
-    "static/css/main.fbacc9a0.css",
-    "static/js/main.3b6c04aa.js"
+    "static/css/main.11dcdf9d.css",
+    "static/js/main.292b5241.js"
   ]
 }
