@@ -74,25 +74,37 @@ const App = () => {
   return (
     <div className="wrapper">
       <div className="todo">
-        <h1>my todo list</h1>
-        <ul id="myUl">
-          {listsItems.map((list) => (
-            <li
-              key={list._id}
-              className={`${list.checked ? "checked" : ""}`}
-              onClick={() => handleToggle(list)}
-            >
-              {list.name}
-              <span
-                className="close"
-                onClick={(event) => handleDelete(event, list._id)}
-              >
-                X
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+  <h1>my todo list</h1>
+  <ul id="myUl" className={listsItems.length === 0 ? "skeleton-con" : ""}>
+    {listsItems.length === 0 ? (
+      // Render skeleton items
+      <>
+        <li className="skeleton"></li>
+        <li className="skeleton"></li>
+        <li className="skeleton"></li>
+        <li className="skeleton"></li>
+      </>
+    ) : (
+      // Render actual todo items
+      listsItems.map((list) => (
+        <li
+          key={list._id}
+          className={`${list.checked ? "checked" : ""}`}
+          onClick={() => handleToggle(list)}
+        >
+          {list.name}
+          <span
+            className="close"
+            onClick={(event) => handleDelete(event, list._id)}
+          >
+            X
+          </span>
+        </li>
+      ))
+    )}
+  </ul>
+</div>
+
       <form className="submit" onSubmit={handleSubmit}>
         <input
           type="text"

@@ -164,3 +164,36 @@
         padding: 1em;
     }
   }
+
+
+  /* skeleton */
+
+/* ... other CSS rules ... */
+
+.skeleton-con{
+  background: rgba(255, 255, 255, 0.2);
+  animation: loading 1s infinite alternate;
+  border-radius: 8px;
+  margin: 0.5em 0;
+  padding: .8em .5em .5em 1.2em;
+  height: 100%;
+  width: 100%;
+}
+
+li.skeleton {
+  border-radius: 8px;
+  margin: 1em 0;
+  list-style-type: none;
+  height: 40px;
+  animation: loading 1s infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
